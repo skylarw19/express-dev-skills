@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Page</title>
+</head>
+<body>
+    <h1>Skill Details</h1>
+    <h3><%= skill.skill %></h3>
+    <% if (skill.learned === false) { %>
+        <h3>Not Learned</h3> 
+    <% } %>
+    <% if (skill.learned === true) { %>
+        <h3>Learned</h3>
+    <% } %>
+                <form action="/skills/<%= id %>?_method=DELETE" class="delete-form" method="POST">
+                    <button type="submit">Delete Skill</button>
+                </form>
+    
+</body>
+</html>
